@@ -9,12 +9,8 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "files.eol": "\n",
-  "cSpell.words": [
-    "Rawdaty",
-    "antd",
-    "boomify"
-  ],
+  "cSpell.words": ["Rawdaty", "antd", "boomify"],
   "prettier.singleQuote": true
 }
