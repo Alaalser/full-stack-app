@@ -1,10 +1,10 @@
 /* ADD USER */
 
-INSERT INTO users(user_name,email,password)
+INSERT INTO users(user,email,password)
 VALUES ('alaa','alaa@alaa.com','alaa@alaa.com');
-INSERT INTO users(user_name,email,password)
+INSERT INTO users(user,email,password)
 VALUES ('moh','moh@moh.com','moh@moh.com');
-INSERT INTO users(user_name,email,password) 
+INSERT INTO users(user,email,password) 
 VALUES ('messi','messi@messi.com','$messi@messi.com');
 
 /* ADD NEWS */
