@@ -5,10 +5,7 @@ const { boomify } = require('../../utils');
 const { addUserSchema } = require('../../utils/validation');
 
 const addUser = async (req, res, next) => {
-  console.log('hi');
-
   try {
-    console.log('hi');
     const { userName, email, password } = await addUserSchema.validate(
       req.body,
 
@@ -29,7 +26,7 @@ const addUser = async (req, res, next) => {
       .status(201)
       .json({ statusCode: 201, message: 'registered successfully', data });
   } catch (error) {
-    next(
+    return next(
       error.name === 'ValidationError'
         ? boomify(400, 'Validation Error', error.errors)
         : error

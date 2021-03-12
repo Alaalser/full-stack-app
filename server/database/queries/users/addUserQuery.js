@@ -1,4 +1,3 @@
-const e = require('express');
 const connection = require('../../data/connection');
 
 const addUserQuery = (userName, email, password) => {

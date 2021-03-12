@@ -1,4 +1,4 @@
-const boomify = require('../../utils');
+const { boomify } = require('../../utils');
 
 const serverError = (err, req, res, next) => {
   console.log(err);
