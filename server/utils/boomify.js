@@ -1,5 +1,5 @@
-const boomify = (statusCose, error, message) => ({
-  statusCose,
+const boomify = (statusCode, error, message) => ({
+  statusCode,
   error,
   message,
 });
