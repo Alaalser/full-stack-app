@@ -1,19 +1,41 @@
 import React from 'react';
-import Button from '../../Components/Button';
 import Input from '../../Components/Input';
 import './style.css';
 
 const Signup = () => (
   <form className="form">
-    <Input type="text" id="name" placeholder="user name" />
-    <Input type="email" id="email" placeholder="email@expamle.com" />
-    <Input type="password" id="password" placeholder="enter your password" />
+    <div>
+      <Input
+        text="User"
+        type="text"
+        label="User Name"
+        id="name"
+        placeholder="user name"
+      />
+    </div>
+    <div>
+      <Input
+        text="Email"
+        type="email"
+        id="email"
+        placeholder="email@expamle.com"
+      />
+    </div>
     <Input
+      text="Password"
       type="password"
-      id="confirmedPassword"
-      placeholder="password again"
-    />
-    <Button text="Sign up" />
+      id="password"
+      placeholder="enter your password"
+    />{' '}
+    <div>
+      <Input
+        text="confirmed Password"
+        type="password"
+        id="confirmedPassword"
+        placeholder="password again"
+      />
+    </div>
+    <Input type="submit" value="submit" />
   </form>
 );
 
