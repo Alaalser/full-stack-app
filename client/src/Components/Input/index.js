@@ -1,10 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Input = ({ text, type, placeholder, onChange }) => (
+const Input = ({ text, type, placeholder, onChange, value }) => (
   <label>
     {text}
-    <input type={type} placeholder={placeholder} onChange={onChange} />
+    <input
+      type={type}
+      placeholder={placeholder}
+      onChange={onChange}
+      value={value}
+    />
   </label>
 );
 
@@ -20,4 +25,5 @@ Input.propTypes = {
   placeholder: PropTypes.string.isRequired,
   onChange: PropTypes.string,
   text: PropTypes.string,
+  value: PropTypes.string.isRequired,
 };

@@ -36,55 +36,61 @@ const Signup = () => {
         password,
         confirmPassword,
       });
-      console.log(data);
       history.push('/');
       return data;
     } catch (error) {
-      console.log(error);
       return error;
     }
   };
 
   return (
-    <>
-      <form className="form" onSubmit={submitHandler}>
-        <div>
-          <Input
-            text="User Name"
-            type="text"
-            placeholder="user name"
-            onChange={userNameHandler}
-            value={user}
-          />
-        </div>
-        <div>
-          <Input
-            text="Email"
-            type="email"
-            placeholder="email@expamle.com"
-            onChange={emailHandler}
-            value={email}
-          />
-        </div>
+    <div className="container">
+      <h1>Sign up</h1>
+      <form className="signup-container" onSubmit={submitHandler}>
         <Input
+          className="input-container user-name"
+          text="User Name"
+          type="text"
+          placeholder="user name"
+          onChange={userNameHandler}
+          value={user}
+        />
+
+        <Input
+          className="input-container email"
+          text="Email"
+          type="email"
+          placeholder="email@expamle.com"
+          onChange={emailHandler}
+          value={email}
+        />
+
+        <Input
+          className="input-container Password"
           text="Password"
           type="password"
           placeholder="enter your password"
           onChange={passwordHandler}
           value={password}
         />
-        <div>
-          <Input
-            text="confirm Password"
-            type="password"
-            placeholder="password again"
-            onChange={confirmPasswordHandler}
-            value={confirmPassword}
-          />
-        </div>
-        <Input type="submit" placeholder="" />
+
+        <Input
+          className="input-container Password"
+          text="confirm Password"
+          type="password"
+          placeholder="password again"
+          onChange={confirmPasswordHandler}
+          value={confirmPassword}
+        />
+
+        <Input
+          className="signup-btn"
+          type="submit"
+          placeholder=""
+          value="Sign up"
+        />
       </form>
-    </>
+    </div>
   );
 };
 export default Signup;
