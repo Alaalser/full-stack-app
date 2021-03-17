@@ -1,19 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Input = ({ text, type, id, placeholder, value }) => (
+const Input = ({ text, type, placeholder, onChange }) => (
   <label>
     {text}
-    <input type={type} id={id} placeholder={placeholder} value={value} />
+    <input type={type} placeholder={placeholder} onChange={onChange} />
   </label>
 );
 
 export default Input;
 
+Input.defaultProps = {
+  text: '',
+  onChange: '',
+};
+
 Input.propTypes = {
   type: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  onChange: PropTypes.string,
+  text: PropTypes.string,
 };
