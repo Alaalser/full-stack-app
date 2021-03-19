@@ -7,6 +7,7 @@ import './style.css';
 const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMsg, setErrorMsg] = useState();
 
   const history = useHistory();
 
@@ -21,20 +22,24 @@ const Signup = () => {
   const submitHandler = async (event) => {
     event.preventDefault();
     try {
-      const { data } = await Axios.post('api/v1/login', {
+      await Axios.post('api/v1/login', {
         email,
         password,
       });
       history.push('/');
-      return data;
     } catch (error) {
-      return error;
+      let msg;
+      if (error.response.data.message) {
+        msg = error.response.data.message;
+      }
+      setErrorMsg(msg);
     }
   };
 
   return (
     <div className="container">
       <h1>Welcome back</h1>
+      {errorMsg && <p> {errorMsg} </p>}
       <form className="signup-container" onSubmit={submitHandler}>
         <Input
           className="input-container email"

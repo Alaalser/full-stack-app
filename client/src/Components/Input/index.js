@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Input = ({ text, type, placeholder, onChange, value }) => (
+const Input = ({ text, type, placeholder, onChange, value, ...other }) => (
   <label>
     {text}
     <input
@@ -9,6 +9,7 @@ const Input = ({ text, type, placeholder, onChange, value }) => (
       placeholder={placeholder}
       onChange={onChange}
       value={value}
+      {...other}
     />
   </label>
 );
