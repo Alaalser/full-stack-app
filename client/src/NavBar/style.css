@@ -1,0 +1,12 @@
+.Nav button {
+  text-align: center;
+  float: right;
+  margin: 0.8rem;
+  background: #3c415c;
+  width: 7rem;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}

@@ -9,6 +9,7 @@ const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [errorMsg, setErrorMsg] = useState();
   const history = useHistory();
 
   const userNameHandler = (event) => {
@@ -30,22 +31,28 @@ const Signup = () => {
   const submitHandler = async (event) => {
     event.preventDefault();
     try {
-      const { data } = await Axios.post('api/v1/signup', {
-        userName: user,
-        email,
+      setErrorMsg();
+
+      await Axios.post('api/v1/signup', {
+        userName: user.trim(),
+        email: email.trim(),
         password,
         confirmPassword,
       });
       history.push('/');
-      return data;
     } catch (error) {
-      return error;
+      let msg;
+      if (error.response.data.message) {
+        msg = error.response.data.message;
+      }
+      setErrorMsg(msg[0]);
     }
   };
 
   return (
-    <div className="container">
+    <div className="container-form">
       <h1>Sign up</h1>
+      {errorMsg && <p> {errorMsg} </p>}
       <form className="signup-container" onSubmit={submitHandler}>
         <Input
           className="input-container user-name"
@@ -54,6 +61,7 @@ const Signup = () => {
           placeholder="user name"
           onChange={userNameHandler}
           value={user}
+          required
         />
 
         <Input
@@ -63,6 +71,7 @@ const Signup = () => {
           placeholder="email@expamle.com"
           onChange={emailHandler}
           value={email}
+          required
         />
 
         <Input
@@ -72,6 +81,7 @@ const Signup = () => {
           placeholder="enter your password"
           onChange={passwordHandler}
           value={password}
+          required
         />
 
         <Input
@@ -81,6 +91,7 @@ const Signup = () => {
           placeholder="password again"
           onChange={confirmPasswordHandler}
           value={confirmPassword}
+          required
         />
 
         <Input

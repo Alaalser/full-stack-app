@@ -24,7 +24,7 @@ const addUser = async (req, res, next) => {
     return res
       .cookie('token', token, { httpOnly: true })
       .status(201)
-      .json({ statusCode: 201, message: 'registered successfully', data });
+      .json({ statusCode: 201, message: 'registered successfully' });
   } catch (error) {
     return next(
       error.name === 'ValidationError'
