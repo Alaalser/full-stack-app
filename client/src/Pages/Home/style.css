@@ -3,6 +3,7 @@
   background-color: #3b3241;
   color: white;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .title {
@@ -23,6 +24,7 @@
   width: 65%;
   padding: 2rem;
   list-style: none;
+  margin: 0 auto;
 }
 
 li {

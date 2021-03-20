@@ -1,4 +1,3 @@
-const { addUser } = require('./users');
-const { login } = require('./users');
+const { addUser, login, logout } = require('./users');
 
-module.exports = { addUser, login };
+module.exports = { addUser, login, logout };

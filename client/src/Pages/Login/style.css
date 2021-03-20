@@ -1,4 +1,4 @@
-/* .container-form {
+.container-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,4 +44,4 @@ form input[type='submit'] {
   padding: 1rem;
   border-radius: 8px;
   font-size: 1.2rem;
-} */
+}

@@ -6,22 +6,20 @@ import './style.css';
 const NavBar = () => (
   <div>
     <div className="Nav-right">
-      <ul>
-        <Link
-          to={{
-            pathname: '/signup',
-          }}
-        >
-          <Button text="sign up" />
-        </Link>
-        <Link
-          to={{
-            pathname: '/login',
-          }}
-        >
-          <Button text="log in" />
-        </Link>
-      </ul>
+      <Link
+        to={{
+          pathname: '/signup',
+        }}
+      >
+        <Button text="sign up" />
+      </Link>
+      <Link
+        to={{
+          pathname: '/login',
+        }}
+      >
+        <Button text="log in" />
+      </Link>
     </div>
     <div className="Nav-left">
       <Link
