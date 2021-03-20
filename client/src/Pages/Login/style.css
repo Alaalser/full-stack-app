@@ -1,16 +1,19 @@
-.container {
+/* .container-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  background-color: #3b3241;
+  color: #fff;
 }
 
-h1 {
-  font-size: 2rem;
+.container-form h1 {
+  font-size: 2.25rem;
   font-weight: 700;
   text-align: center;
-  margin-top: 5rem;
-  color: #5a5a5a;
+  color: #b4a5a5;
+  padding-left: 2rem;
 }
 
 form input[type='text'],
@@ -21,24 +24,24 @@ form input[type='password'] {
   border: 1px solid #c4c4c4;
   border-radius: 0.5rem;
   margin-bottom: 1.25rem;
-  font-size: 0.875rem;
+  font-size: 1.5rem;
   padding: 1em;
 }
 
 label {
   display: block;
   margin-bottom: 0.5rem;
-  font-size: 0.75rem;
+  font-size: 1.2rem;
 }
 
 form input[type='submit'] {
   display: block;
   margin-left: 0.8rem;
   width: 100%;
-  background: #233975;
+  background: #3c415c;
   color: #fff;
   border: none;
   padding: 1rem;
   border-radius: 8px;
-  font-size: 0.75;
-}
+  font-size: 1.2rem;
+} */

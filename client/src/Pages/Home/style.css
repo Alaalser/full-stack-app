@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  background-color: #3b3241;
+  color: white;
+  justify-content: center;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  padding-left: 2rem;
+}
+
+.description {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  color: #b4a5a5;
+}
+
+.container ul {
+  width: 65%;
+  padding: 2rem;
+  list-style: none;
+}
+
+li {
+  margin: 2rem;
+  margin-bottom: 5rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem 0rem;
+}

@@ -37,7 +37,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container-form">
       <h1>Welcome back</h1>
       {errorMsg && <p> {errorMsg} </p>}
       <form className="signup-container" onSubmit={submitHandler}>
