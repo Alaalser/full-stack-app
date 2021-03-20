@@ -4,23 +4,34 @@ import Button from '../Components/Button';
 import './style.css';
 
 const NavBar = () => (
-  <div className="Nav">
-    <ul>
+  <div>
+    <div className="Nav-right">
+      <ul>
+        <Link
+          to={{
+            pathname: '/signup',
+          }}
+        >
+          <Button text="sign up" />
+        </Link>
+        <Link
+          to={{
+            pathname: '/login',
+          }}
+        >
+          <Button text="log in" />
+        </Link>
+      </ul>
+    </div>
+    <div className="Nav-left">
       <Link
         to={{
-          pathname: '/signup',
+          pathname: '/',
         }}
       >
-        <Button text="sign up" />
+        <Button text="Home" />
       </Link>
-      <Link
-        to={{
-          pathname: '/login',
-        }}
-      >
-        <Button text="log in" />
-      </Link>
-    </ul>
+    </div>
   </div>
 );
 

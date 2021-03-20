@@ -1,7 +1,19 @@
-.Nav button {
+.Nav-right button {
   text-align: center;
   float: right;
   margin: 0.8rem;
+  background: #3c415c;
+  width: 7rem;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+.Nav-left button {
+  text-align: center;
+  margin: 0.8rem 0 0 5rem;
   background: #3c415c;
   width: 7rem;
   color: #fff;
