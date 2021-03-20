@@ -9,6 +9,7 @@
     "test": "cross-env NODE_ENV=test jest",
     "client": "cd client && npm start",
     "build-db": "cross-env NODE_ENV=test node server/database/data/build",
+    "lint-react": "cd client && npm run lint",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
