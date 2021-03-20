@@ -4,11 +4,15 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Pages/Home';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
+import NavBar from './NavBar';
 
 const App = () => (
   <Router>
     <Switch>
       <div className="App">
+        <Route>
+          <NavBar />
+        </Route>
         <Route exact path="/">
           <Home />
         </Route>
