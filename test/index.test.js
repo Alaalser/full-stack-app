@@ -6,7 +6,6 @@ const { addUserQuery } = require('../server/database/queries');
 beforeEach(() => dbBuild());
 afterAll(() => connection.end());
 
-// test the add user query
 describe('Testing add users query', () => {
   test('Should return data length 1', () =>
     addUserQuery('سيف', 'sa.sa.com', '123456789', '123456789')
@@ -14,23 +13,7 @@ describe('Testing add users query', () => {
       .catch());
 });
 
-// test the route /kindergarten/:kindergartenId/comments
 describe('Test the route POST /signup', () => {
-  // test('should return status code 201 and data length 1 when given POST  /signup', async () => {
-  //   expect.assertions(1);
-  //   const res = await request(app)
-  //     .post('/api/v1/signup')
-  //     .send({
-  //       userName: 'alaalser',
-  //       email: 'alaa@alser.com',
-  //       password: '123456789',
-  //       confirmPassword: '123456789',
-  //     })
-  //     .expect(201);
-  //   const { data } = res.body;
-  //   expect(data).toHaveLength(1);
-  // });
-
   test('should return status code 400 and validation error message when given not valid email POST  /signup', async () => {
     expect.assertions(1);
     const res = await request(app)
