@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ text }) => (
-  <button type="button" id="send">
+const Button = ({ text, ...other }) => (
+  <button {...other} type="button" id="send">
     {text}
   </button>
 );

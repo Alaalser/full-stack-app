@@ -1,3 +1,9 @@
-const { addUser, login, logout, getAuthUser } = require('./users');
+const {
+  addUser,
+  login,
+  logout,
+  getAuthUser,
+  authorizedUser,
+} = require('./users');
 
-module.exports = { addUser, login, logout, getAuthUser };
+module.exports = { addUser, login, logout, getAuthUser, authorizedUser };

@@ -1,30 +1,44 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router-dom';
 import Home from './Pages/Home';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
-import NavBar from './NavBar';
+import UserProfile from './Pages/UserProfile';
+import { PrivateRoutes, LoggedOutRoutes } from './Routes';
 
 const App = () => (
-  <Router>
-    <Switch>
-      <div className="App">
-        <Route>
-          <NavBar />
-        </Route>
+  <div className="App">
+    <Router>
+      <Switch>
         <Route exact path="/">
           <Home />
         </Route>
+        <LoggedOutRoutes exact path="/login">
+          <Login />
+        </LoggedOutRoutes>
         <Route exact path="/signup">
           <Signup />
         </Route>
-        <Route exact path="/login">
-          <Login />
+        <PrivateRoutes>
+          <Switch>
+            <Route exact path="/:userId">
+              <UserProfile exact path="/:userId" />
+            </Route>
+          </Switch>
+        </PrivateRoutes>
+        <Route>
+          <h1>Error 404 Not Found !!</h1>
         </Route>
-      </div>
-    </Switch>
-  </Router>
+        <Redirect to="/404" />
+      </Switch>
+    </Router>
+  </div>
 );
 
 export default App;
